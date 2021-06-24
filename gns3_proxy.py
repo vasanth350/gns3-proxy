@@ -53,7 +53,7 @@ if os.name != 'nt':
 # Default arguments
 DEFAULT_CONFIG_FILE = 'gns3_proxy_config.ini'
 DEFAULT_LOG_LEVEL = 'INFO'
-DEFAULT_INACTIVITY_TIME = 300
+DEFAULT_INACTIVITY_TIME = 3600
 
 VERSION = (0, 8)
 __version__ = '.'.join(map(str, VERSION[0:2]))
@@ -1094,7 +1094,7 @@ def main():
     if config.get('proxy','inactivity-time'):
     	DEFAULT_INACTIVITY_TIME = config.get('proxy','inactivity-time')
     else:
-    	DEFAULT_INACTIVITY_TIME = 300	
+    	DEFAULT_INACTIVITY_TIME = 3600	
     
     
 
